@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: black;
+}
+
+.m {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    background: #f0f0f0;
+}
+
+.hd h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.w {
+    display: flex;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.l {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.i {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.i:hover {
+    background: #f0f0f0;
+}
+
+.i h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.i p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}
+
+.btn {
+    cursor: pointer;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.del {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.del:hover {
+    text-decoration: underline;
+}
+
+.close {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    display: block;
+}
+
+.f {
+    background: white;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.f-hd {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 450px) {
+    .hd .add {
+        display: block;
+    }
+
+    .f {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        border-left: none;
+        display: none;
+    }
+
+    .f.show {
+        display: flex;
+    }
+
+    .close {
+        display: block;
+    }
+}
+
+@media (min-width: 450px) {
+    .hd .add {
+        display: none;
+    }
+
+    .f {
+        display: flex;
+    }
+
+    .close {
+        display: none;
+    }
+}
